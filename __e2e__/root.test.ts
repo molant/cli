@@ -10,7 +10,7 @@ import {
 
 const cwd = getTempDirectory('test_different_roots');
 
-beforeAll(() => {
+beforeAll(async () => {
   // Register all packages to be linked
   for (const pkg of ['platform-ios', 'platform-android']) {
     spawnScript('yarn', ['link'], {

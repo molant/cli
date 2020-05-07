@@ -35,7 +35,7 @@ function createCorruptedSetupEnvScript() {
   };
 }
 
-beforeAll(async () => {
+beforeAll(() => {
   // Register all packages to be linked
   for (const pkg of ['platform-ios', 'platform-android']) {
     spawnScript('yarn', ['link'], {
